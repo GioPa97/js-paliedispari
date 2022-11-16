@@ -1,10 +1,7 @@
-
 /* Esercizio di oggi: Palindroma / Pari e Dispari 
-
 Palidroma:
 Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma e poi usate quella funzione appena dichiarata
-
 Pari e Dispari:
 L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
 Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
@@ -32,11 +29,11 @@ while (pariDispari) {
     } else {
 
         switch (scelta) {
-            case "pari" && "PARI":
+            case "pari":
                 pariDispari = false;
                 console.log("Hai scelto: Pari");
                 break;
-            case "dispari" && "DISPARI":
+            case "dispari":
                 pariDispari = false;
                 console.log("Hai scelto: Dispari");
                 break;
@@ -50,6 +47,7 @@ do {
     numeroUtente = parseInt(prompt("inserisci un numero compreso tra 1 e 5:"));
 } while (!(numeroUtente >= 1 && numeroUtente <= 5)) {
     console.log("Hai scelto: " + numeroUtente);
+
 }
 
 
