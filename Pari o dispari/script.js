@@ -18,27 +18,28 @@ Consigli del giorno:
 //Chiedo una parola all'utente attraverso prompt e la stampo in console;
 
 
-//_______________________________CODICE MAIN____________________________________________
+let pariDispari = true;
 
 
-//_______________________________________________________________________________________
+while (pariDispari) {
 
+    let scelta = prompt("pari o dispari?");
 
+    if (!isNaN(scelta)) {
 
+        console.log("Inserisci pari o dispari");
 
+    } else {
 
-
-
-
-
-
-
-
-
-
-
-//-------------------------------FUNZIONI DICHIARATE--------------------------------------
-
-
-
-//-----------------------------------------------------------------------------------------
+        switch (scelta) {
+            case "pari":
+                pariDispari = false;
+                console.log("Hai scelto: Pari");
+                break;
+            case "dispari":
+                pariDispari = false;
+                console.log("Hai scelto: Dispari");
+                break;
+        }
+    }
+}
