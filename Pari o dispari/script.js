@@ -44,9 +44,11 @@ while (pariDispari) {
     }
 }
 
-do {let numeroUtente = parseInt(prompt("inserisci un numero compreso tra 1 e 5:"));}
+let numeroUtente = (0);
 
-while (!(numeroUtente >= 1 && numeroUtente <= 5)) {
+do {
+    numeroUtente = parseInt(prompt("inserisci un numero compreso tra 1 e 5:"));
+} while (!(numeroUtente >= 1 && numeroUtente <= 5)) {
     console.log("Hai scelto: " + numeroUtente);
-  }
-  
+
+}
