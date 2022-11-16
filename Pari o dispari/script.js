@@ -32,11 +32,11 @@ while (pariDispari) {
     } else {
 
         switch (scelta) {
-            case "pari":
+            case "pari" && "PARI":
                 pariDispari = false;
                 console.log("Hai scelto: Pari");
                 break;
-            case "dispari":
+            case "dispari" && "DISPARI":
                 pariDispari = false;
                 console.log("Hai scelto: Dispari");
                 break;
@@ -50,5 +50,48 @@ do {
     numeroUtente = parseInt(prompt("inserisci un numero compreso tra 1 e 5:"));
 } while (!(numeroUtente >= 1 && numeroUtente <= 5)) {
     console.log("Hai scelto: " + numeroUtente);
-
 }
+
+
+
+
+// Salvo in una variabile il numero generato dalla funzione pcRandomizer.
+
+let pcNumber = pcRandomizer(1, 5);
+console.log("Il pc ha scelto: " + pcNumber);
+
+// Stampo la somma tra il numero dell'utente e quello del pc.
+let somma = numeroUtente + pcNumber;
+console.log("La somma tra i due numeri è: " + somma);
+
+// Verifico se il numero generato dalla somma tra utente e pc è pari o dispari.
+if (IsNotUneven = (parseInt(somma)) == true) {
+    console.log("Numero pari");
+}
+else {
+    console.log("Numero dispari");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-------------------------------FUNZIONI DICHIARATE--------------------------------------
+
+
+function pcRandomizer(min, max) {
+    return Math.floor(Math.random() * (max) + min);
+}
+
+
+
+  //-------------------------------FUNZIONI DICHIARATE--------------------------------------
