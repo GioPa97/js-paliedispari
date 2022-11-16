@@ -1,4 +1,4 @@
-/* Esercizio di oggi: Palindroma / Pari e Dispari 
+/*Esercizio di oggi: Palindroma / Pari e Dispari 
 Palidroma:
 Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma e poi usate quella funzione appena dichiarata
@@ -10,43 +10,44 @@ Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
 Consigli del giorno:
 1. Scriviamo sempre in italiano i passaggi che vogliamo fare
-2. Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti. */
+2. Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti.*/
 
 //Chiedo una parola all'utente attraverso prompt e la stampo in console;
 
 
 let pariDispari = true;
-
+let scelta = true;
 
 while (pariDispari) {
 
-    let scelta = prompt("pari o dispari?");
+  let scelta = prompt("pari o dispari?");
+  
 
-    if (!isNaN(scelta)) {
+  if (!isNaN(scelta)) {
 
-        console.log("Inserisci pari o dispari");
+    console.log("Inserisci pari o dispari");
 
-    } else {
+  } else {
 
-        switch (scelta) {
-            case "pari":
-                pariDispari = false;
-                console.log("Hai scelto: Pari");
-                break;
-            case "dispari":
-                pariDispari = false;
-                console.log("Hai scelto: Dispari");
-                break;
-        }
+    switch (scelta) {
+      case "pari":
+        pariDispari = false;
+        console.log("Hai scelto: Pari");
+        break;
+      case "dispari":
+        pariDispari = false;
+        console.log("Hai scelto: Dispari");
+        break;
     }
+  }
 }
 
 let numeroUtente = (0);
 
 do {
-    numeroUtente = parseInt(prompt("inserisci un numero compreso tra 1 e 5:"));
+  numeroUtente = parseInt(prompt("inserisci un numero compreso tra 1 e 5:"));
 } while (!(numeroUtente >= 1 && numeroUtente <= 5)) {
-    console.log("Hai scelto: " + numeroUtente);
+  console.log("Hai scelto: " + numeroUtente);
 
 }
 
@@ -63,21 +64,22 @@ let somma = numeroUtente + pcNumber;
 console.log("La somma tra i due numeri è: " + somma);
 
 // Verifico se il numero generato dalla somma tra utente e pc è pari o dispari.
-if (IsNotUneven = (parseInt(somma)) == true) {
-    console.log("Numero pari");
+if (somma % 2 == 0) {
+  console.log('La somma è pari.');
+  // altrimenti
+} else {
+  console.log('La somma è dispari.');
 }
-else {
-    console.log("Numero dispari");
+
+if (scelta == "pari" && somma % 2 == 0) {
+  console.log("Hai vinto!");
+} else if (scelta == "pari" && somma % 2 == 1) {
+  console.log("Ha vinto il computer!:( ");
+} else if (scelta == "dispari" && somma % 2 == 0) {
+  console.log("Ha vinto il computer!");
+} else {
+  console.log("Hai vinto!");
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -87,7 +89,7 @@ else {
 
 
 function pcRandomizer(min, max) {
-    return Math.floor(Math.random() * (max) + min);
+  return Math.floor(Math.random() * (max) + min);
 }
 
 
