@@ -15,5 +15,41 @@ Consigli del giorno:
 1. Scriviamo sempre in italiano i passaggi che vogliamo fare
 2. Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti. */
 
+//Chiedo una parola all'utente attraverso prompt e la stampo in console;
+
 let promptParola = prompt("Inserisci una parola:");
 console.log(promptParola);
+
+//_______________________________CODICE MAIN____________________________________________
+
+let parolaInversa = invertiParola(promptParola);
+
+if (promptParola == parolaInversa) {
+    console.log('la parola è palindroma');
+} else {
+    console.log('la parola non è palindroma');
+}
+//_______________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-------------------------------FUNZIONI DICHIARATE--------------------------------------
+
+function invertiParola(str) {
+    let strInversa = str.split('').reverse().join('');
+    return strInversa;
+}
+
+//-----------------------------------------------------------------------------------------
